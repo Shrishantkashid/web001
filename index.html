@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Parth!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f1923;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/400') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            color: #ff4655;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(255, 70, 85, 0.7);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-item span {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff4655;
+        }
+
+        .countdown-item p {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 50px;
+            font-size: 1.2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #ff4655;
+            text-transform: uppercase;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .valorant-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .valorant-section h2 {
+            color: #ff4655;
+            margin-bottom: 30px;
+        }
+
+        .valorant-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .valorant-section .signature {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #ff4655;
+        }
+
+        .message-section {
+            padding: 100px 20px;
+        }
+
+        .message-card {
+            background-color: #1f2731;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .message-card h3 {
+            color: #ff4655;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .message-card p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #0a111a;
+            text-align: center;
+            padding: 30px 0;
+            color: #8b939c;
+        }
+
+        .agents {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .agent-card {
+            background-color: #1f2731;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .agent-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .agent-info {
+            padding: 20px;
+        }
+
+        .agent-info h3 {
+            font-size: 1.5rem;
+            color: #ff4655;
+            margin-bottom: 10px;
+        }
+
+        .agent-info p {
+            font-size: 1rem;
+            color: #8b939c;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ff4655;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 30px;
+        }
+
+        .button:hover {
+            background-color: #e43144;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Happy Birthday Parth!</h1>
+            <p>Celebrating our awesome Valorant teammate and friend</p>
+
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days">0</span>
+                    <p>Days</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">0</span>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">0</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">0</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+
+            <a href="#message" class="button">See Birthday Message</a>
+        </div>
+        <div class="scroll-down">Scroll Down ↓</div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>Parth: The Legend</h2>
+            <p>On March 18th, we celebrate the birthday of an amazing friend and an incredible Valorant player. Parth's
+                strategic mind, quick reflexes, and exceptional teamwork make him not just a great player but also an
+                awesome friend to have in our lives.</p>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/250" alt="Parth Gaming Moment">
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/250" alt="Birthday Celebration">
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/250" alt="Friend Memories">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="valorant" class="valorant-section">
+        <div class="container">
+            <h2>The Valorant Champion</h2>
+            <p>Whether you're clutching rounds with your amazing aim, making perfect callouts, or just making us laugh
+                during tough matches - playing Valorant with you has brought so much joy to my life. Thank you for all
+                the competitive matches, the patient coaching, and the unforgettable gaming moments we've shared. You
+                make every game better with your presence.</p>
+            <p>Here's to many more Ace rounds and Victory screens together!</p>
+            <p class="signature">- Shrawani</p>
+        </div>
+    </section>
+
+    <section id="agents">
+        <div class="container">
+            <h2>Valorant Agents (Just Like You!)</h2>
+            <p>Just like these agents, you bring unique skills and abilities to every game and to our friendship.</p>
+
+            <div class="agents">
+                <div class="agent-card">
+                    <img src="/api/placeholder/250/250" alt="Jett">
+                    <div class="agent-info">
+                        <h3>Jett</h3>
+                        <p>Fast, agile, and deadly accurate - just like your gameplay</p>
+                    </div>
+                </div>
+
+                <div class="agent-card">
+                    <img src="/api/placeholder/250/250" alt="Phoenix">
+                    <div class="agent-info">
+                        <h3>Phoenix</h3>
+                        <p>Bright personality that lights up every room and match</p>
+                    </div>
+                </div>
+
+                <div class="agent-card">
+                    <img src="/api/placeholder/250/250" alt="Omen">
+                    <div class="agent-info">
+                        <h3>Omen</h3>
+                        <p>Strategic and always thinking steps ahead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="message" class="message-section">
+        <div class="container">
+            <h2>A Birthday Message For You</h2>
+
+            <div class="message-card">
+                <h3>Dear Parth,</h3>
+                <p>Happy Birthday to my favorite Valorant buddy! I'm so grateful for all the matches we've played
+                    together and for the happiness you bring into my life. Your friendship means the world to me, and
+                    I'm thankful for every moment we spend gaming together.</p>
+                <p>You've made Valorant so much more fun than just a game - it's become a place where we create
+                    memories, share laughs, and forge a stronger friendship. Thank you for being patient when I'm
+                    learning, for celebrating my small victories, and for being such an incredible teammate both in-game
+                    and in life.</p>
+                <p>On your special day, I wish you all the happiness, success, and of course, many more Victory screens!
+                </p>
+                <p>Your friend and teammate,</p>
+                <p><strong>Shrawani</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Made with ♥ for Parth's birthday on March 18th, 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown to March 18, 2025
+        const countdownDate = new Date("March 18, 2025 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "0";
+                document.getElementById("minutes").innerHTML = "0";
+                document.getElementById("seconds").innerHTML = "0";
+
+                // Change header text to "Happy Birthday!" if the day has arrived
+                if (new Date().getDate() === 18 && new Date().getMonth() === 2) { // Month is 0-indexed
+                    document.querySelector("header h1").innerHTML = "Happy Birthday Today, Parth!";
+                    document.querySelector("header p").innerHTML = "The day has arrived! Time to celebrate!";
+                }
+            }
+        }
+
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
