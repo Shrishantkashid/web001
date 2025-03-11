@@ -25,6 +25,12 @@
             padding: 0 20px;
         }
 
+        .container p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         header {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/400') center/cover;
             height: 100vh;
@@ -52,6 +58,8 @@
 
         .countdown {
             display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
         }
@@ -99,7 +107,7 @@
         }
 
         section {
-            padding: 80px 0;
+            padding: 80px 0;    
         }
 
         section h2 {
@@ -159,6 +167,7 @@
         }
 
         .message-section {
+
             padding: 100px 20px;
         }
 
@@ -167,9 +176,18 @@
             border-radius: 10px;
             padding: 30px;
             max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 30px;
+            /* Adds spacing between cards */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
+
+        .message-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+            /* Adds the zoom-in effect */
+        }
+
+
 
         .message-card h3 {
             color: #ff4655;
@@ -257,7 +275,7 @@
     <header>
         <div class="container">
             <h1>Happy Birthday Parth!</h1>
-            <p>Celebrating our awesome Valorant teammate and friend</p>
+            <p>Celebrating our awesome friend's janam din</p>
 
             <div class="countdown">
                 <div class="countdown-item">
@@ -285,20 +303,26 @@
 
     <section id="about">
         <div class="container">
-            <h2>Parth: The Legend</h2>
-            <p>On March 18th, we celebrate the birthday of an amazing friend and an incredible Valorant player. Parth's
-                strategic mind, quick reflexes, and exceptional teamwork make him not just a great player but also an
-                awesome friend to have in our lives.</p>
+            <h2>Parth: The Ultimate Vibe</h2>
+            <p>March 18th marks the birthday of someone truly special—our very own Parth! 🎉 The most active soul on the
+                server, always
+                up for a chat, a game, or just some random chaos. Whether it's dropping the funniest one-liners or just
+                being the
+                sweetest person around, Parth brings the best vibes everywhere. And let’s not forget—he’s one of the
+                lucky few who gets
+                to enjoy paneer every single day! 🧀✨
+
+                Wishing you an amazing year ahead, Parth! Stay awesome! 🚀</p>
 
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/250" alt="Parth Gaming Moment">
+                    <img src="/9f0a83410e99a667a80d9c5d11ee67a5.jpg" alt="Parth Gaming Moment">
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/250" alt="Birthday Celebration">
+                    <img src="/d4a91de39935088996c00e0b8c289f5c.jpg" alt="Birthday Celebration">
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/250" alt="Friend Memories">
+                    <img src="/ed4f3140705a112e515272b1e6f3d513.jpg" alt="Friend Memories">
                 </div>
             </div>
         </div>
@@ -306,13 +330,14 @@
 
     <section id="valorant" class="valorant-section">
         <div class="container">
-            <h2>The Valorant Champion</h2>
+            <h2>His Valorant Side</h2>
             <p>Whether you're clutching rounds with your amazing aim, making perfect callouts, or just making us laugh
-                during tough matches - playing Valorant with you has brought so much joy to my life. Thank you for all
-                the competitive matches, the patient coaching, and the unforgettable gaming moments we've shared. You
+                during tough matches - playing Valorant with you has brought so much joy to Our life. Thank you for all
+                the competitive matches, the patient coaching, and the unforgettable gaming moments that we've shared.
+                You
                 make every game better with your presence.</p>
             <p>Here's to many more Ace rounds and Victory screens together!</p>
-            <p class="signature">- Shrawani</p>
+            <p class="signature">- Your Teammates (aka Shrawani Ansh Amman)</p>
         </div>
     </section>
 
@@ -323,15 +348,17 @@
 
             <div class="agents">
                 <div class="agent-card">
-                    <img src="/api/placeholder/250/250" alt="Jett">
+                    <img src="/valorant.avif" alt="reyna">
                     <div class="agent-info">
-                        <h3>Jett</h3>
-                        <p>Fast, agile, and deadly accurate - just like your gameplay</p>
+                        <h3>Reyna</h3>
+                        <p>Fearless, confident, and always in control—just like you in every match and in life!</p>
                     </div>
                 </div>
 
+
+
                 <div class="agent-card">
-                    <img src="/api/placeholder/250/250" alt="Phoenix">
+                    <img src="/Valorant_Phoenix_Banner-1024x576.jpg" alt="Phoenix">
                     <div class="agent-info">
                         <h3>Phoenix</h3>
                         <p>Bright personality that lights up every room and match</p>
@@ -339,7 +366,7 @@
                 </div>
 
                 <div class="agent-card">
-                    <img src="/api/placeholder/250/250" alt="Omen">
+                    <img src="/valorant-omen.avif" alt="Omen">
                     <div class="agent-info">
                         <h3>Omen</h3>
                         <p>Strategic and always thinking steps ahead</p>
@@ -351,7 +378,37 @@
 
     <section id="message" class="message-section">
         <div class="container">
-            <h2>A Birthday Message For You</h2>
+            <h2>Birthday Wishes For You</h2>
+
+            <div class="message-card">
+                <h3>Dear Parth,</h3>
+                <p>Happy Birthday to my favorite Valorant buddy! I'm so grateful for all the matches we've played
+                    together and for the happiness you bring into my life. Your friendship means the world to me, and
+                    I'm thankful for every moment we spend gaming together.</p>
+                <p>You've made Valorant so much more fun than just a game - it's become a place where we create
+                    memories, share laughs, and forge a stronger friendship. Thank you for being patient when I'm
+                    learning, for celebrating my small victories, and for being such an incredible teammate both in-game
+                    and in life.</p>
+                <p>On your special day, I wish you all the happiness, success, and of course, many more Victory screens!
+                </p>
+                <p>Your friend and teammate,</p>
+                <p><strong>Shrawani</strong></p>
+            </div>
+
+            <div class="message-card">
+                <h3>Dear Parth,</h3>
+                <p>Happy Birthday to my favorite Valorant buddy! I'm so grateful for all the matches we've played
+                    together and for the happiness you bring into my life. Your friendship means the world to me, and
+                    I'm thankful for every moment we spend gaming together.</p>
+                <p>You've made Valorant so much more fun than just a game - it's become a place where we create
+                    memories, share laughs, and forge a stronger friendship. Thank you for being patient when I'm
+                    learning, for celebrating my small victories, and for being such an incredible teammate both in-game
+                    and in life.</p>
+                <p>On your special day, I wish you all the happiness, success, and of course, many more Victory screens!
+                </p>
+                <p>Your friend and teammate,</p>
+                <p><strong>Shrawani</strong></p>
+            </div>
 
             <div class="message-card">
                 <h3>Dear Parth,</h3>
@@ -372,7 +429,7 @@
 
     <footer>
         <div class="container">
-            <p>Made with ♥ for Parth's birthday on March 18th, 2025</p>
+            <p>Made with ♥ for Parth</p>
         </div>
     </footer>
 
